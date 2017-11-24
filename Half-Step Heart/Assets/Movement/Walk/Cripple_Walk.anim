@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Crippe_walk
+  m_Name: Cripple_Walk
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,15 +20,15 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 9effb145e82a4904c9d5192aedf388aa, type: 3}
-    - time: 0.1
+    - time: 0.13333334
       value: {fileID: 21300002, guid: 9effb145e82a4904c9d5192aedf388aa, type: 3}
-    - time: 0.2
+    - time: 0.25
       value: {fileID: 21300004, guid: 9effb145e82a4904c9d5192aedf388aa, type: 3}
-    - time: 0.3
-      value: {fileID: 21300006, guid: 9effb145e82a4904c9d5192aedf388aa, type: 3}
     - time: 0.4
+      value: {fileID: 21300006, guid: 9effb145e82a4904c9d5192aedf388aa, type: 3}
+    - time: 0.51666665
       value: {fileID: 21300008, guid: 9effb145e82a4904c9d5192aedf388aa, type: 3}
-    - time: 0.5
+    - time: 0.65
       value: {fileID: 21300010, guid: 9effb145e82a4904c9d5192aedf388aa, type: 3}
     attribute: m_Sprite
     path: 
@@ -60,7 +60,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.51666665
+    m_StopTime: 0.6666666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

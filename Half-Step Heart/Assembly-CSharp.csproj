@@ -51,8 +51,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\CameraController.cs" />
+     <Compile Include="Assets\Script\CameraController_Main.cs" />
+     <Compile Include="Assets\Script\EnemyCode.cs" />
      <Compile Include="Assets\Script\Movement.cs" />
+     <Compile Include="Assets\Script\PanelToggle.cs" />
      <Compile Include="Assets\Script\Standing.cs" />
+     <Compile Include="Assets\Script\StartingGameScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
