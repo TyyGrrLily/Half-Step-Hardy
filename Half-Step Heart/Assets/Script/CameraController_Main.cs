@@ -7,6 +7,8 @@ public class CameraController_Main : MonoBehaviour {
 
     public GameObject player;
     private Vector3 offset;
+    public float right_barrier;
+    public float left_barrier;
     private float y_pos;
     private float x_pos;
     // Use this for initialization
@@ -17,7 +19,7 @@ public class CameraController_Main : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (player.transform.position.x >= 0 && player.transform.position.x < 11.45)
+        if (player.transform.position.x >= left_barrier +1.95F && player.transform.position.x < right_barrier-2.35)
         {
             transform.position = player.transform.position + offset;
         }

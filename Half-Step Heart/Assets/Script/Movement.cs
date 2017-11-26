@@ -1,10 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Movement : MonoBehaviour {
-
+public class Movement : MonoBehaviour
+{
+    public GameObject enemy;
+    public GameObject collision;
+    public GameObject panel;
+    public Text dialog;
+    public Scene nextScene;
     private Animator amin;
     private SpriteRenderer direction;
     public bool _canMove;
@@ -15,6 +21,7 @@ public class Movement : MonoBehaviour {
         amin.SetBool("isFighting", false);
         direction = GetComponent<SpriteRenderer>();
         _canMove = true;
+        
     }
 
     // Update is called once per frame
@@ -38,16 +45,16 @@ public class Movement : MonoBehaviour {
             {
                 amin.SetBool("isWalking", false);
             }
-            if(Input.GetKey(KeyCode.X))
+         /*   if (Input.GetKey(KeyCode.X))
             {
                 amin.SetBool("isFighting", true);
-                
+
             }
             else
             {
                 amin.SetBool("isFighting", false);
-            }
-            
+            }*/
+
         }
         else
         {
@@ -59,9 +66,24 @@ public class Movement : MonoBehaviour {
             transform.parent.position += new Vector3(0, .1f, 0);
         }
         //transform.parent.rotation = new Vector3(0F, 0F, 0F);
+        if(Vector3.Distance(collision.transform.position, transform.position) <= 1 && Input.GetKey(KeyCode.Z))
+        {
+            Destroy(enemy.gameObject);
+            panel.SetActive(true);
+            CanMove(false);
+            //collision
+
+
+        }
+    }
+    private void Wait(string scene)
+    {
+        new WaitForSeconds(5);
+        SceneManager.LoadScene(scene);
     }
     public void CanMove(bool boo)
     {
         _canMove = boo;
     }
+    
 }

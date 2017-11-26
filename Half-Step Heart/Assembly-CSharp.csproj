@@ -51,11 +51,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\BadFinalFlower.cs" />
+     <Compile Include="Assets\Script\Bed_code.cs" />
+     <Compile Include="Assets\Script\BigNightmareCode.cs" />
      <Compile Include="Assets\Script\CameraController.cs" />
      <Compile Include="Assets\Script\CameraController_Main.cs" />
+     <Compile Include="Assets\Script\Cat_Script.cs" />
+     <Compile Include="Assets\Script\ChangeScene.cs" />
+     <Compile Include="Assets\Script\DoorCode.cs" />
      <Compile Include="Assets\Script\EnemyCode.cs" />
+     <Compile Include="Assets\Script\Flower_Script.cs" />
+     <Compile Include="Assets\Script\Heart_BadEnding.cs" />
+     <Compile Include="Assets\Script\LittleNightMare_Final.cs" />
+     <Compile Include="Assets\Script\MomWalking.cs" />
      <Compile Include="Assets\Script\Movement.cs" />
+     <Compile Include="Assets\Script\MovementDaytime.cs" />
      <Compile Include="Assets\Script\PanelToggle.cs" />
+     <Compile Include="Assets\Script\Shell_Code.cs" />
      <Compile Include="Assets\Script\Standing.cs" />
      <Compile Include="Assets\Script\StartingGameScript.cs" />
  <Reference Include="UnityEngine.UI">

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/NightRealm.unity
+- path: Assets/Scenes/NightRealm_Final_Bad.unity
   isLoaded: 1
   isActive: 1

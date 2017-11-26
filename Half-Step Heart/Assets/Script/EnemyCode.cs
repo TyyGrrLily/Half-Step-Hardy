@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class EnemyCode : MonoBehaviour {
     public GameObject player;
+    public GameObject collision;
+    public GameObject panel;
     private Vector3 temp;
     private SpriteRenderer x_flip;
     public LayerMask layer;
-    private int _moveSpeed = 1;
-    private int _maxDist = 3;
-    private float _minDist = .1F;
-    private bool _characterFound = false;
+    public Scene currentScene;
+    private int speed = 1;
+    private float minDist = .1F;
 
     void Start()
     {
@@ -20,14 +21,14 @@ public class EnemyCode : MonoBehaviour {
     }
     void Update()
     {
-        
-       
 
-        if (Vector3.Distance(transform.position, player.transform.position) >= _minDist)
+
+
+        if (Vector3.Distance(transform.position, player.transform.position) > minDist)
         {
 
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, (_moveSpeed * Time.deltaTime));
-            if( transform.position.x-player.transform.position.x > 0)
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, (speed * Time.deltaTime));
+            if (transform.position.x - player.transform.position.x > 0)
             {
                 x_flip.flipX = true;
             }
@@ -36,9 +37,17 @@ public class EnemyCode : MonoBehaviour {
                 x_flip.flipX = false;
             }
         }
-        if(Physics2D.OverlapCircle(player.transform.position, .1F, layer))
+        else
         {
-           // SceneManager.LoadScene("NightRealm");
+            //https://answers.unity.com/questions/64395/reload-current-level-when-i-die.html
+            int scene = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(scene, LoadSceneMode.Single);
+            
+        }
+        if (panel.activeSelf)
+        {
+            Destroy(gameObject);
+
         }
     }
 }
