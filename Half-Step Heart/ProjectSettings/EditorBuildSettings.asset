@@ -6,23 +6,68 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/OpeningScene.unity
+    path: Assets/Scenes/0_OpeningScene.unity
     guid: ccc8b82232eab314fa56ee7c81d4ff98
   - enabled: 1
-    path: Assets/Scenes/Basic.unity
+    path: Assets/Scenes/1_Basic.unity
     guid: f2be9f7edffbc17499e8d82b94afd024
   - enabled: 1
-    path: Assets/Scenes/NightRealm.unity
+    path: Assets/Scenes/2_NightRealm.unity
     guid: 34be735b655b14049a4b47fd01d4b547
   - enabled: 1
-    path: Assets/Scenes/BedRoom.unity
+    path: Assets/Scenes/3_BedRoomDay_1.unity
     guid: 74278593c5be3014292e38646f13b13f
   - enabled: 1
-    path: Assets/Scenes/Beach.unity
+    path: Assets/Scenes/4_Beach.unity
     guid: cbb5f8ed87ebb0c4e8ef597205f2b2e7
   - enabled: 1
-    path: Assets/Scenes/BedRoomNight.unity
+    path: Assets/Scenes/5_BedRoomNight_1.unity
     guid: fab1f7a6fc50aa544a173e873a68ae49
   - enabled: 1
-    path: Assets/Scenes/NightRealm_Ocean.unity
+    path: Assets/Scenes/6_NightRealm_Ocean.unity
     guid: 12b47c5d52f851b47a9b63f93f4cd432
+  - enabled: 1
+    path: Assets/Scenes/7_BedRoomDay_2.unity
+    guid: 25a585677320d5342a582f9a412f71a8
+  - enabled: 1
+    path: Assets/Scenes/8_School_1.unity
+    guid: c1ed30f326e6aff47a40ed98507f5eb6
+  - enabled: 1
+    path: Assets/Scenes/9_BedRoomNight_2.unity
+    guid: c58363e6c0482fb41b24e66acee48f8d
+  - enabled: 1
+    path: Assets/Scenes/10_NightRealm_Jungle.unity
+    guid: 79e2ed526e18a874fb421a0632c20560
+  - enabled: 1
+    path: Assets/Scenes/11_BedRoomDay_3.unity
+    guid: ac00c64abeef1c4488d5605583d48c11
+  - enabled: 1
+    path: Assets/Scenes/12_Beach_Day2.unity
+    guid: 8cfa1204b85d0424db3c7a1aecec066c
+  - enabled: 1
+    path: Assets/Scenes/13_BedRoomNight_3.unity
+    guid: f0907463fe2351942991950dc1a35467
+  - enabled: 1
+    path: Assets/Scenes/14_NightRealm_Lost.unity
+    guid: 55482b5def2984c4d9f648254dcaa1cd
+  - enabled: 1
+    path: Assets/Scenes/15_BedRoomDay_4.unity
+    guid: edb4b25cbebffd74d8ea942a841172ec
+  - enabled: 1
+    path: Assets/Scenes/16_School_2.unity
+    guid: d2f326d7b9142994d8a9b0c9d3de71ec
+  - enabled: 1
+    path: Assets/Scenes/17_BedRoomNight_4.unity
+    guid: cee43329330a3724dbb4d1079fe42129
+  - enabled: 1
+    path: Assets/Scenes/18_NightRealm_Final.unity
+    guid: 4ca2be2cf6098334aab805c7af89099b
+  - enabled: 1
+    path: Assets/Scenes/19_BedRoom_GoodEnding.unity
+    guid: 2efdba48b12d0aa40bf0d2ed40edf13a
+  - enabled: 1
+    path: Assets/Scenes/20_GoodEnding.unity
+    guid: d37c1f4705d168a46803396ef41a9ed8
+  - enabled: 1
+    path: Assets/Scenes/Credit_Scene.unity
+    guid: f212185d76d93324e8aae076b70677a4

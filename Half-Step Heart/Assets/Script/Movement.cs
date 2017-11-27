@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
         amin = GetComponent<Animator>();
         amin.SetBool("isWalking", false);
         amin.SetBool("isFighting", false);
+        amin.SetBool("isHappy", false);
         direction = GetComponent<SpriteRenderer>();
         _canMove = true;
         
@@ -45,16 +46,7 @@ public class Movement : MonoBehaviour
             {
                 amin.SetBool("isWalking", false);
             }
-         /*   if (Input.GetKey(KeyCode.X))
-            {
-                amin.SetBool("isFighting", true);
-
-            }
-            else
-            {
-                amin.SetBool("isFighting", false);
-            }*/
-
+       
         }
         else
         {
@@ -65,10 +57,10 @@ public class Movement : MonoBehaviour
         {
             transform.parent.position += new Vector3(0, .1f, 0);
         }
-        //transform.parent.rotation = new Vector3(0F, 0F, 0F);
-        if(Vector3.Distance(collision.transform.position, transform.position) <= 1 && Input.GetKey(KeyCode.Z))
+      //checks for interaction objects
+        if(Vector3.Distance(collision.transform.position, transform.position) <= 2 && Input.GetKey(KeyCode.Z))
         {
-            Destroy(enemy.gameObject);
+           // Destroy(enemy.gameObject);
             panel.SetActive(true);
             CanMove(false);
             //collision
@@ -76,12 +68,7 @@ public class Movement : MonoBehaviour
 
         }
     }
-    private void Wait(string scene)
-    {
-        new WaitForSeconds(5);
-        SceneManager.LoadScene(scene);
-    }
-    public void CanMove(bool boo)
+    public void CanMove(bool boo) //allows outside codes to use
     {
         _canMove = boo;
     }

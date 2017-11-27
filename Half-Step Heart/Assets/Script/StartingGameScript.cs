@@ -34,6 +34,7 @@ public class StartingGameScript : MonoBehaviour
         player.CanMove(false);
 
     }
+    //Dialog, avoids accidentally skipping parts
     private void Dialog()
     {
         if (dialogPlace == 0)

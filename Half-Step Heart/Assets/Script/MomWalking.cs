@@ -30,7 +30,7 @@ public class MomWalking : MonoBehaviour {
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, (speed * Time.deltaTime));
         }
-        else if( haveTalked == false)
+        else if( haveTalked == false) //checks for cimantics
         {
             panel.SetActive(true);
             amin.SetBool("isWalking", false);
@@ -50,7 +50,7 @@ public class MomWalking : MonoBehaviour {
                 haveTalked = true;
             }
 
-        }
+        }//walks away
         else if(haveTalked == true && Vector3.Distance(transform.position, player.transform.position) < 6F)
         {
             panel.SetActive(false);
@@ -60,7 +60,7 @@ public class MomWalking : MonoBehaviour {
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(player.transform.position.x + 10, player.transform.position.y), (speed * Time.deltaTime));
         }
         else
-        {
+        {//destroys object
            
             Destroy(gameObject);
             player.CanMove(true);

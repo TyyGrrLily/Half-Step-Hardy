@@ -18,7 +18,7 @@ public class CameraController_Main : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () { //Centers camera on player
         if (player.transform.position.x >= left_barrier +1.95F && player.transform.position.x < right_barrier-2.35)
         {
             transform.position = player.transform.position + offset;

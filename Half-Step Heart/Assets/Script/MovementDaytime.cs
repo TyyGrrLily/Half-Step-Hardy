@@ -13,6 +13,7 @@ public class MovementDaytime : MonoBehaviour
     private Animator amin;
     private SpriteRenderer direction;
     public bool _canMove;
+    public bool _isHappy;
     void Start()
     {
         amin = GetComponent<Animator>();
@@ -20,21 +21,25 @@ public class MovementDaytime : MonoBehaviour
         //amin.SetBool("isFighting", false);
         direction = GetComponent<SpriteRenderer>();
         _canMove = true;
-
+        amin.SetBool("isHappy", false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (_isHappy)
+        {
+            amin.SetBool("isHappy", true);
+        }
         if (_canMove)
         {
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.RightArrow)) //walking code right
             {
                 transform.parent.position += new Vector3(.01f, 0, 0);
                 amin.SetBool("isWalking", true);
                 direction.flipX = false;
             }
-            else if (Input.GetKey(KeyCode.LeftArrow))
+            else if (Input.GetKey(KeyCode.LeftArrow))//walking code left
             {
                 transform.parent.position -= new Vector3(.01f, 0, 0);
                 amin.SetBool("isWalking", true);
@@ -44,16 +49,7 @@ public class MovementDaytime : MonoBehaviour
             {
                 amin.SetBool("isWalking", false);
             }
-            /*   if (Input.GetKey(KeyCode.X))
-               {
-                   amin.SetBool("isFighting", true);
-
-               }
-               else
-               {
-                   amin.SetBool("isFighting", false);
-               }*/
-
+            
         }
         else
         {
@@ -64,7 +60,7 @@ public class MovementDaytime : MonoBehaviour
         {
             transform.parent.position += new Vector3(0, .1f, 0);
         }
-        //transform.parent.rotation = new Vector3(0F, 0F, 0F);
+       //checks for objects interactions
         if (Vector3.Distance(collision.transform.position, transform.position) <= 1 && Input.GetKey(KeyCode.Z))
         {
            
@@ -75,12 +71,8 @@ public class MovementDaytime : MonoBehaviour
 
         }
     }
-    private void Wait(string scene)
-    {
-        new WaitForSeconds(5);
-        SceneManager.LoadScene(scene);
-    }
-    public void CanMove(bool boo)
+
+    public void CanMove(bool boo) //used outside of this code
     {
         _canMove = boo;
     }

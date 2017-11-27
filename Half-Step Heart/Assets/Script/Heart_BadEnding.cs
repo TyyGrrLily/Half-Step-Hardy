@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+//Not used, not enough time to implement
 public class Heart_BadEnding : MonoBehaviour
 {
     private Animator amin;

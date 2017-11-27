@@ -22,9 +22,7 @@ public class LittleNightMare_Final : MonoBehaviour
     }
     void Update()
     {
-
-
-
+        //allows to be jumped on while goes to Heart
         if (Vector3.Distance(transform.position, player.transform.position) > minDist)
         {
 
@@ -47,12 +45,5 @@ public class LittleNightMare_Final : MonoBehaviour
             Destroy(gameObject);
 
         }
-        /*  void OnTriggerEnter(Collider other)
-          {
-              if (other.gameObject.tag == "Player")
-              {
-                  SceneManager.LoadScene("NightRealm");
-              }
-          }*/
     }
 }

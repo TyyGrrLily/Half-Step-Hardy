@@ -16,7 +16,7 @@ public class PanelToggle : MonoBehaviour {
 	void Update () {
 		
 	}
-    public void Toggle()
+    public void Toggle() //toggle button panel
     {
         panel.SetActive(!panel.activeSelf);
     }

@@ -23,7 +23,7 @@ public class EnemyCode : MonoBehaviour {
     {
 
 
-
+        //chases player
         if (Vector3.Distance(transform.position, player.transform.position) > minDist)
         {
 

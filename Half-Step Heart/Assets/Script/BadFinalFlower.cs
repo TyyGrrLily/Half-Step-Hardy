@@ -9,6 +9,7 @@ public class BadFinalFlower : MonoBehaviour {
     public GameObject panel;
     public Movement player;
     public Text text;
+    public EnemyCode bigEnemy;
     // Use this for initialization
     void Start() {
         amin = GetComponent<Animator>();
@@ -17,7 +18,14 @@ public class BadFinalFlower : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if ()
+        if (panel.activeSelf)
+        {
+            amin.SetBool("isDying", true);
+            if(Input.GetKey(KeyCode.Z))
+            {
+
+            }
+        }
 
     }
     private void OnCollisionEnter2D(Collision2D collisions)

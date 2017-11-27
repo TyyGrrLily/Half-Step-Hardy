@@ -31,6 +31,7 @@ public class Cat_Script : MonoBehaviour {
         player.CanMove(false);
 
     }
+    //Dialog, avoids accidentally skipping parts
     private void Dialog()
     {
         if (dialogPlace == 0)

@@ -42,6 +42,7 @@ public class Flower_Script : MonoBehaviour
         player.CanMove(false);
 
     }
+    //Dialog, avoids accidentally skipping parts
     private void Dialog()
     {
         if (dialogPlace == 0)
@@ -56,7 +57,7 @@ public class Flower_Script : MonoBehaviour
         }
         else if(dialogPlace == 2)
         {
-            dialog.text = " 'That was almost a year ago. Look at how much as change, yet seems the same' ";
+            dialog.text = " 'That was almost a year ago. Look at how much has change, yet seems the same' ";
             dialogPlace++;
         }
         else if (dialogPlace == 3)
